@@ -4,17 +4,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-namespace SimpleUser\Service;
+namespace YAUM\Service;
 
-use SimpleUser\Contract\Credential;
-use SimpleUser\Contract\CredentialChecker;
-use SimpleUser\Contract\User;
-use SimpleUser\Contract\UserRepository;
-use SimpleUser\Exception\IncompatibleModelException;
-use SimpleUser\Exception\UserNotFoundException;
-use SimpleUser\Exception\WrongPasswordException;
-use SimpleUser\Model\BasicCredential;
-use SimpleUser\Model\BasicUser;
+use YAUM\Contract\Credential;
+use YAUM\Contract\CredentialChecker;
+use YAUM\Contract\User;
+use YAUM\Contract\UserRepository;
+use YAUM\Exception\IncompatibleModelException;
+use YAUM\Exception\UserNotFoundException;
+use YAUM\Exception\WrongPasswordException;
+use YAUM\Model\BasicCredential;
+use YAUM\Model\BasicUser;
 
 /**
  * Description of BasicCredentialChecker

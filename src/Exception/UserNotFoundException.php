@@ -1,4 +1,4 @@
-<?php namespace SimpleUser\Exception;
+<?php namespace YAUM\Exception;
 
 /**
  * Description of UserNotExistException

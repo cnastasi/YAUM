@@ -4,10 +4,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-namespace SimpleUser\Model;
+namespace YAUM\Model;
 
-use SimpleUser\Contract\User;
-use SimpleUser\Contract\UserSession;
+use YAUM\Contract\User;
+use YAUM\Contract\UserSession;
 
 /**
  * Description of BasicUserSession

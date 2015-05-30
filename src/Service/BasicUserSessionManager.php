@@ -4,11 +4,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-namespace SimpleUser\Service;
+namespace YAUM\Service;
 
-use SimpleUser\Contract\UserSession;
-use SimpleUser\Contract\UserSessionManager;
-use SimpleUser\Contract\UserSessionRepository;
+use YAUM\Contract\UserSession;
+use YAUM\Contract\UserSessionManager;
+use YAUM\Contract\UserSessionRepository;
 
 /**
  * Description of BasicUserSessionManager

@@ -4,13 +4,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-namespace SimpleUser\Service;
+namespace YAUM\Service;
 
-use SimpleUser\Contract\Credential;
-use SimpleUser\Contract\CredentialChecker;
-use SimpleUser\Contract\UserService;
-use SimpleUser\Contract\UserSessionFactory;
-use SimpleUser\Contract\UserSessionManager;
+use YAUM\Contract\Credential;
+use YAUM\Contract\CredentialChecker;
+use YAUM\Contract\UserService;
+use YAUM\Contract\UserSessionFactory;
+use YAUM\Contract\UserSessionManager;
 
 /**
  * Description of UserServiceDefault

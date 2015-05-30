@@ -14,8 +14,8 @@
     },
     "autoload": {
         "psr-4": {
-            "SimpleUser\\": "src/",
-            "SimpleUser\\Test\\": "tests/"
+            "YAUM\\": "src/",
+            "YAUM\\Test\\": "tests/"
         }
     }
 }

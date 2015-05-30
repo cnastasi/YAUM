@@ -1,4 +1,4 @@
-<?php namespace SimpleUser\Repository;
+<?php namespace YAUM\Repository;
 
 /**
  * Description of SimpleRepository

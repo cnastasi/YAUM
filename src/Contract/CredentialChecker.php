@@ -1,4 +1,4 @@
-<?php namespace SimpleUser\Contract;
+<?php namespace YAUM\Contract;
 
 /**
  * Description of CredentialChecker

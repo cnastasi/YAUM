@@ -1,6 +1,6 @@
-<?php namespace SimpleUser\Model;
+<?php namespace YAUM\Model;
 
-use SimpleUser\Contract\Credential;
+use YAUM\Contract\Credential;
 
 /**
  * Description of BasicCredential

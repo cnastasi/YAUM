@@ -4,11 +4,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-namespace SimpleUser\Factory;
+namespace YAUM\Factory;
 
-use SimpleUser\Contract\User;
-use SimpleUser\Contract\UserSessionFactory;
-use SimpleUser\Model\BasicUserSession;
+use YAUM\Contract\User;
+use YAUM\Contract\UserSessionFactory;
+use YAUM\Model\BasicUserSession;
 
 /**
  * Description of UserSessionFactory

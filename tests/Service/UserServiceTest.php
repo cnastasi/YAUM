@@ -4,17 +4,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-namespace SimpleUser\Test\Service;
+namespace YAUM\Test\Service;
 
 use PHPUnit_Framework_TestCase;
-use SimpleUser\Factory\BasicUserSessionFactory;
-use SimpleUser\Model\BasicCredential;
-use SimpleUser\Model\BasicUser;
-use SimpleUser\Repository\SimpleUserRepository;
-use SimpleUser\Repository\SimpleUserSessionRepository;
-use SimpleUser\Service\BasicCredentialChecker;
-use SimpleUser\Service\BasicUserSessionManager;
-use SimpleUser\Service\UserServiceDefault;
+use YAUM\Factory\BasicUserSessionFactory;
+use YAUM\Model\BasicCredential;
+use YAUM\Model\BasicUser;
+use YAUM\Repository\SimpleUserRepository;
+use YAUM\Repository\SimpleUserSessionRepository;
+use YAUM\Service\BasicCredentialChecker;
+use YAUM\Service\BasicUserSessionManager;
+use YAUM\Service\UserServiceDefault;
 
 /**
  * Description of UserServiceTest

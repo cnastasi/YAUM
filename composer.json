@@ -1,6 +1,7 @@
 {
     "name": "cnastasi/yaum-core",
     "description": "Yet Another User Manager.",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "Christian Nastasi",

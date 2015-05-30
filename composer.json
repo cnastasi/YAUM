@@ -1,0 +1,20 @@
+{
+    "name": "cnastasi/simple-user-manager",
+    "description": "Description of project SimpleUserManager.",
+    "authors": [
+        {
+            "name": "Christian Nastasi",
+            "email": "christian.nastasi@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "dev-master",
+        "mockery/mockery": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "SimpleUser\\": "src/",
+            "SimpleUser\\Test\\": "tests/"
+        }
+    }
+}

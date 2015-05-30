@@ -1,6 +1,6 @@
 {
-    "name": "cnastasi/simple-user-manager",
-    "description": "Description of project SimpleUserManager.",
+    "name": "cnastasi/yaum-core",
+    "description": "Yet Another User Manager.",
     "authors": [
         {
             "name": "Christian Nastasi",

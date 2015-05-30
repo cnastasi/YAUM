@@ -1,0 +1,7 @@
+{
+    "name": "cnastasi/yaum-core",
+    "description": "Yet Another User Manager",
+    "require": {
+        "php": ">=5.4.0"
+    }
+}

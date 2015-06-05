@@ -1,21 +1,22 @@
 {
-    "name": "cnastasi/yaum-core",
-    "description": "Yet Another User Manager.",
-    "version": "1.0.0",
-    "authors": [
-        {
-            "name": "Christian Nastasi",
-            "email": "christian.nastasi@gmail.com"
-        }
-    ],
-    "require-dev": {
-        "phpunit/phpunit": "~4.2",
-        "mockery/mockery": "@stable"
-    },
-    "autoload": {
-        "psr-4": {
-            "YAUM\\": "src/",
-            "YAUM\\Test\\": "tests/"
-        }
+  "name": "cnastasi/yaum-core",
+  "description": "Yet Another User Manager.",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Christian Nastasi",
+      "email": "christian.nastasi@gmail.com"
     }
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "~4.2",
+    "mockery/mockery": "@stable",
+    "phploc/phploc": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "YAUM\\": "src/",
+      "YAUM\\Test\\": "tests/"
+    }
+  }
 }

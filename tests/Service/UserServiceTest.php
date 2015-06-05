@@ -69,7 +69,7 @@ class UserServiceTest extends PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @expectedException \SimpleUser\Exception\UserNotFoundException
+     * @expectedException \YAUM\Exception\UserNotFoundException
      */
     public function shouldNotLoginWithWrongUsername()
     {
@@ -80,7 +80,7 @@ class UserServiceTest extends PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @expectedException \SimpleUser\Exception\WrongPasswordException
+     * @expectedException \YAUM\Exception\WrongPasswordException
      */
     public function shouldNotLoginWithWrongPassword()
     {

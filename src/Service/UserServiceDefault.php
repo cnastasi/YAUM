@@ -28,22 +28,21 @@ class UserServiceDefault implements UserService
 
     /**
      *
-     * @var UserSessionManager 
+     * @var UserSessionManager
      */
     private $userSessionManager;
 
     /**
      *
-     * @var UserSessionFactory 
+     * @var UserSessionFactory
      */
     private $userSessionFactory;
 
     public function __construct(
-    CredentialChecker $credentialChecker,
-    UserSessionFactory $userSessionFactory,
-    UserSessionManager $userSessionManager
-    )
-    {
+        CredentialChecker $credentialChecker,
+        UserSessionFactory $userSessionFactory,
+        UserSessionManager $userSessionManager
+    ) {
         $this->credentialChecker  = $credentialChecker;
         $this->userSessionManager = $userSessionManager;
         $this->userSessionFactory = $userSessionFactory;

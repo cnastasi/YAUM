@@ -9,8 +9,8 @@
         }
     ],
     "require-dev": {
-        "phpunit/phpunit": "dev-master",
-        "mockery/mockery": "dev-master"
+        "phpunit/phpunit": "~4.2",
+        "mockery/mockery": "@stable"
     },
     "autoload": {
         "psr-4": {

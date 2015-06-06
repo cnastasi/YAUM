@@ -69,7 +69,7 @@ class UserServiceTest extends PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @expectedException \SimpleUser\Exception\UserNotFoundException
+     * @expectedException \YAUM\Exception\UserNotFoundException
      */
     public function shouldNotLoginWithWrongUsername()
     {
@@ -80,12 +80,52 @@ class UserServiceTest extends PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @expectedException \SimpleUser\Exception\WrongPasswordException
+     * @expectedException \YAUM\Exception\WrongPasswordException
      */
     public function shouldNotLoginWithWrongPassword()
     {
         $credential = new BasicCredential($this->defaultUsername, 'wrong password');
 
         $token = $this->service->login($credential);
+    }
+
+    /**
+     * @test
+     */
+    public function shouldSignup()
+    {
+        $this->markTestSkipped();
+    }
+
+    /**
+     * @test
+     */
+    public function shouldNotSignup()
+    {
+        $this->markTestSkipped();
+    }
+
+    /**
+     * @test
+     */
+    public function shouldLogout()
+    {
+        $this->markTestSkipped();
+    }
+
+    /**
+     * @test
+     */
+    public function shouldChangeThePassword()
+    {
+        $this->markTestSkipped();
+    }
+
+    /**
+     * @test
+     */
+    public function shouldRestoreThePassword()
+    {
+        $this->markTestSkipped();
     }
 }

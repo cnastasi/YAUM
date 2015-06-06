@@ -65,4 +65,4 @@ class UserServiceDefault implements UserService
 
         return $session !== null;
     }
-}
+    }

@@ -4,27 +4,27 @@
  *
  * @author christian
  */
-interface User
+interface User extends Entity
 {
 
     /**
-     * @return string 
+     * @return string
      */
     public function getUsername();
 
     /**
-     * 
+     *
      * @param string $username
      */
     public function setUsername($username);
 
     /**
-     * @return string 
+     * @return string
      */
     public function getName();
 
     /**
-     * 
+     *
      * @param string $name
      */
     public function setName($name);

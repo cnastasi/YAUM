@@ -18,6 +18,15 @@ interface UserRepository
      * @return User 
      */
     public function getUserByUsername($username);
-    
+
+    /**
+     * @param mixed $id
+     * @return User
+     */
+    public function getById($id);
+
+    /**
+     * @param User $user
+     */
     public function save(User $user);
 }

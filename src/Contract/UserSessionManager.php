@@ -13,11 +13,24 @@ namespace YAUM\Contract;
 interface UserSessionManager
 {
 
+    /**
+     * @param UserSession $session
+     */
     public function store(UserSession $session);
 
+    /**
+     * @param UserSession $session
+     */
     public function update(UserSession $session);
 
+    /**
+     * @param UserSession $session
+     */
     public function destroy(UserSession $session);
 
+    /**
+     * @param $token
+     * @return UserSession
+     */
     public function getUserSession($token);
 }

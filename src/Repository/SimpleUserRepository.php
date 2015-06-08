@@ -30,11 +30,24 @@ class SimpleUserRepository implements UserRepository
 
     public function getUserByUsername($username)
     {
-        return $this->users->get($username);
+        return $this->users->getByCallback(
+            function (User $user) use ($username) {
+                return ($user->getUsername() === $username);
+            }
+        );
     }
 
     public function save(User $user)
     {
-        $this->users->put($user->getUsername(), $user);
+        $this->users->put($user);
+    }
+
+    /**
+     * @param mixed $id
+     * @return User
+     */
+    public function getById($id)
+    {
+        return $this->users->getById($id);
     }
 }

@@ -10,7 +10,7 @@ namespace YAUM\Contract;
  *
  * @author christian
  */
-interface UserSession
+interface UserSession extends Entity
 {
     /**
      * @return User

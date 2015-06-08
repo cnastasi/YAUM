@@ -18,6 +18,11 @@ class BasicUserSession implements UserSession
 {
 
     /**
+     * @var mixed
+     */
+    private $id;
+
+    /**
      *
      * @var token 
      */
@@ -56,5 +61,13 @@ class BasicUserSession implements UserSession
         $baseString = $username . $now . $salt;
 
         return sha1(md5($baseString));
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
     }
 }

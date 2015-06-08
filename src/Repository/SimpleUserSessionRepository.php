@@ -6,8 +6,8 @@
  */
 namespace YAUM\Repository;
 
-use YAUM\Contract\UserSessionRepository;
 use YAUM\Contract\UserSession;
+use YAUM\Contract\UserSessionRepository;
 
 /**
  * Description of SimpleSessionRepository
@@ -16,7 +16,6 @@ use YAUM\Contract\UserSession;
  */
 class SimpleUserSessionRepository implements UserSessionRepository
 {
-
     /**
      *
      * @var SimpleRepository
@@ -30,16 +29,20 @@ class SimpleUserSessionRepository implements UserSessionRepository
 
     public function save(UserSession $session)
     {
-        $this->sessions->put($session->getToken(), $session);
+        $this->sessions->put($session);
     }
 
     public function getUserSession($token)
     {
-        return $this->sessions->get($token);
+        return $this->sessions->getByCallback(
+            function (UserSession $userSession) use ($token) {
+                return $userSession->getToken() === $token;
+            }
+        );
     }
 
     public function remove(UserSession $session)
     {
-        $this->sessions->remove($session->getToken());
+        $this->sessions->remove($session->getId());
     }
 }

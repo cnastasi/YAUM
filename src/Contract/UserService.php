@@ -10,7 +10,7 @@ interface UserService
 
     /**
      * 
-     * @param \SimpleUser\Contract\Credential $credential
+     * @param Credential $credential
      * @return string
      */
     public function login(Credential $credential);

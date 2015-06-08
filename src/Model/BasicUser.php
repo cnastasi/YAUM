@@ -17,6 +17,11 @@ class BasicUser implements User
 {
 
     /**
+     * @var mixed
+     */
+    private $id;
+
+    /**
      *
      * @var string 
      */
@@ -95,5 +100,13 @@ class BasicUser implements User
     public function setPassword($password)
     {
         $this->password = $password;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
     }
 }

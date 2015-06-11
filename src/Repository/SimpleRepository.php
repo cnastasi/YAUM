@@ -30,8 +30,6 @@ class SimpleRepository
     public function __construct()
     {
         $this->map        = array();
-        $this->mapById    = array();
-        $this->idToKeyMap = array();
     }
 
     public function put(Entity $value)

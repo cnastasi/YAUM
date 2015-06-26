@@ -4,17 +4,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-namespace YAUM\Service;
+namespace YAUM\User\Credential;
 
-use YAUM\Contract\Credential;
-use YAUM\Contract\CredentialChecker;
-use YAUM\Contract\User;
-use YAUM\Contract\UserRepository;
-use YAUM\Exception\IncompatibleModelException;
-use YAUM\Exception\UserNotFoundException;
-use YAUM\Exception\WrongPasswordException;
-use YAUM\Model\BasicCredential;
-use YAUM\Model\BasicUser;
+use YAUM\IncompatibleModelException;
+use YAUM\User\BasicUser;
+use YAUM\User\User;
+use YAUM\User\UserNotFoundException;
+use YAUM\User\UserRepository;
+use YAUM\User\WrongPasswordException;
 
 /**
  * Description of BasicCredentialChecker
@@ -31,7 +28,7 @@ class BasicCredentialChecker implements CredentialChecker
     private $userRepository;
 
     /**
-     * 
+     *
      * @param UserRepository $userRepository
      */
     public function __construct(UserRepository $userRepository)
@@ -40,11 +37,11 @@ class BasicCredentialChecker implements CredentialChecker
     }
 
     /**
-     * 
-     * @param Credential $credential
+     *
+     * @param mixed $credential
      * @return User
      */
-    public function check(Credential $credential)
+    public function check($credential)
     {
         return $this->_check($credential);
     }
@@ -59,7 +56,7 @@ class BasicCredentialChecker implements CredentialChecker
         }
 
         if (!($user instanceof BasicUser)) {
-            throw new IncompatibleModelException('SimpleUser\Model\BasicUser', $user);
+            throw new IncompatibleModelException(BasicUser::class, $user);
         }
 
         /** @var BasicUser $user */

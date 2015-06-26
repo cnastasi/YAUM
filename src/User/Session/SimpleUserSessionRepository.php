@@ -4,10 +4,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-namespace YAUM\Repository;
+namespace YAUM\User\Session;
 
-use YAUM\Contract\UserSession;
-use YAUM\Contract\UserSessionRepository;
+use YAUM\SimpleRepository;
 
 /**
  * Description of SimpleSessionRepository

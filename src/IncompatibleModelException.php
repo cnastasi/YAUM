@@ -4,7 +4,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-namespace YAUM\Exception;
+namespace YAUM;
 
 use Exception;
 
@@ -15,6 +15,10 @@ use Exception;
  */
 class IncompatibleModelException extends Exception
 {
+    /**
+     * @param string $expected
+     * @param mixed $model
+     */
     public function __construct($expected, $model)
     {
         $message = sprintf('Incompatible Model: expected %s, found %s', $expected, get_class($model));

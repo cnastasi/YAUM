@@ -1,13 +1,13 @@
-<?php namespace YAUM\Model;
+<?php
 
-use YAUM\Contract\Credential;
+namespace YAUM\User\Credential;
 
 /**
  * Description of BasicCredential
  *
  * @author christian
  */
-class BasicCredential implements Credential
+class BasicCredential
 {
 
     /**
@@ -23,7 +23,7 @@ class BasicCredential implements Credential
     private $password;
 
     /**
-     * 
+     *
      * @param string $username
      * @param string $password
      */
@@ -32,12 +32,14 @@ class BasicCredential implements Credential
         $this->username = $username;
         $this->password = $password;
     }
-    
-    public function getUsername() {
+
+    public function getUsername()
+    {
         return $this->username;
     }
-    
-    public function getPassword() {
+
+    public function getPassword()
+    {
         return $this->password;
     }
 }

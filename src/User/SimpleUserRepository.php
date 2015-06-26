@@ -4,10 +4,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-namespace YAUM\Repository;
+namespace YAUM\User;
 
-use YAUM\Contract\User;
-use YAUM\Contract\UserRepository;
+use YAUM\SimpleRepository;
 
 /**
  * Description of SimpleUserRepository

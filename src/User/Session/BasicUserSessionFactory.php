@@ -4,11 +4,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-namespace YAUM\Factory;
+namespace YAUM\User\Session;
 
-use YAUM\Contract\User;
-use YAUM\Contract\UserSessionFactory;
-use YAUM\Model\BasicUserSession;
+use YAUM\User\User;
 
 /**
  * Description of UserSessionFactory
@@ -17,6 +15,10 @@ use YAUM\Model\BasicUserSession;
  */
 class BasicUserSessionFactory implements UserSessionFactory
 {
+    /**
+     * @param User $user
+     * @return BasicUserSession
+     */
     public function create(User $user)
     {
         return new BasicUserSession($user);

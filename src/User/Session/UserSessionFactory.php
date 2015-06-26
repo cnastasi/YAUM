@@ -4,14 +4,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-namespace YAUM\Contract;
+namespace YAUM\User\Session;
+
+use YAUM\User\User;
 
 /**
- * Description of Credential
  *
  * @author christian
  */
-interface Credential
+interface UserSessionFactory
 {
-    //put your code here
+    /**
+     * 
+     * @param User $user
+     * @return UserSession
+     */
+    public function create(User $user);
 }

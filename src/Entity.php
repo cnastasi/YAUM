@@ -7,7 +7,7 @@
  * Copyright (C) DXI Ltd
  */
 
-namespace YAUM\Contract;
+namespace YAUM;
 
 /**
  * Class Entity

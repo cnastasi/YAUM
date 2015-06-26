@@ -4,9 +4,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-namespace YAUM\Model;
+namespace YAUM\User;
 
-use YAUM\Contract\User;
 
 /**
  * Description of BasicUser

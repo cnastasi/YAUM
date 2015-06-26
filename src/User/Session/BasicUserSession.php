@@ -4,10 +4,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-namespace YAUM\Model;
 
-use YAUM\Contract\User;
-use YAUM\Contract\UserSession;
+namespace YAUM\User\Session;
+
+use YAUM\User\User;
 
 /**
  * Description of BasicUserSession
@@ -24,18 +24,18 @@ class BasicUserSession implements UserSession
 
     /**
      *
-     * @var token 
+     * @var mixed $token
      */
     private $token;
 
     /**
      *
-     * @var User 
+     * @var User
      */
     private $user;
 
     /**
-     * 
+     *
      * @param User $user
      */
     public function __construct(User $user)

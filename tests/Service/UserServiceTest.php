@@ -7,14 +7,21 @@
 namespace YAUM\Test\Service;
 
 use PHPUnit_Framework_TestCase;
-use YAUM\Factory\BasicUserSessionFactory;
-use YAUM\Model\BasicCredential;
-use YAUM\Model\BasicUser;
-use YAUM\Repository\SimpleUserRepository;
-use YAUM\Repository\SimpleUserSessionRepository;
-use YAUM\Service\BasicCredentialChecker;
-use YAUM\Service\BasicUserSessionManager;
-use YAUM\Service\UserServiceDefault;
+use YAUM\User\BasicUser;
+use YAUM\User\Credential\BasicCredential;
+use YAUM\User\Credential\BasicCredentialChecker;
+use YAUM\User\Credential\CredentialChecker;
+use YAUM\User\Session\BasicUserSessionFactory;
+use YAUM\User\Session\BasicUserSessionManager;
+use YAUM\User\Session\SimpleUserSessionRepository;
+use YAUM\User\Session\UserSessionFactory;
+use YAUM\User\Session\UserSessionManager;
+use YAUM\User\Session\UserSessionRepository;
+use YAUM\User\SimpleUserRepository;
+use YAUM\User\User;
+use YAUM\User\UserRepository;
+use YAUM\User\UserService;
+use YAUM\User\UserServiceDefault;
 
 /**
  * Description of UserServiceTest
@@ -24,15 +31,54 @@ use YAUM\Service\UserServiceDefault;
 class UserServiceTest extends PHPUnit_Framework_TestCase
 {
 
+    /**
+     * @var UserRepository
+     */
     private $userRepository;
+
+    /**
+     * @var UserSessionRepository
+     */
     private $sessionRepository;
+
+    /**
+     * @var CredentialChecker
+     */
     private $credentialChecker;
+
+    /**
+     * @var UserSessionManager
+     */
     private $sessionManager;
+
+    /**
+     * @var UserSessionFactory
+     */
     private $userSessionFactory;
+
+    /**
+     * @var UserService
+     */
     private $service;
+
+    /**
+     * @var string
+     */
     private $defaultName;
+
+    /**
+     * @var string
+     */
     private $defaultUsername;
+
+    /**
+     * @var string
+     */
     private $defaultPassword;
+
+    /**
+     * @var User
+     */
     private $defaultUser;
 
     protected function setUp()
@@ -64,12 +110,12 @@ class UserServiceTest extends PHPUnit_Framework_TestCase
 
         $token = $this->service->login($credential);
 
-        $this->assertTrue($this->service->isLogged($token));
+        static::assertTrue($this->service->isLogged($token));
     }
 
     /**
      * @test
-     * @expectedException \YAUM\Exception\UserNotFoundException
+     * @expectedException \YAUM\User\UserNotFoundException
      */
     public function shouldNotLoginWithWrongUsername()
     {
@@ -80,7 +126,7 @@ class UserServiceTest extends PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @expectedException \YAUM\Exception\WrongPasswordException
+     * @expectedException \YAUM\User\WrongPasswordException
      */
     public function shouldNotLoginWithWrongPassword()
     {
@@ -94,7 +140,7 @@ class UserServiceTest extends PHPUnit_Framework_TestCase
      */
     public function shouldSignup()
     {
-        $this->markTestSkipped();
+        static::markTestSkipped();
     }
 
     /**
@@ -102,7 +148,7 @@ class UserServiceTest extends PHPUnit_Framework_TestCase
      */
     public function shouldNotSignup()
     {
-        $this->markTestSkipped();
+        static::markTestSkipped();
     }
 
     /**
@@ -110,7 +156,7 @@ class UserServiceTest extends PHPUnit_Framework_TestCase
      */
     public function shouldLogout()
     {
-        $this->markTestSkipped();
+        static::markTestSkipped();
     }
 
     /**
@@ -118,7 +164,7 @@ class UserServiceTest extends PHPUnit_Framework_TestCase
      */
     public function shouldChangeThePassword()
     {
-        $this->markTestSkipped();
+        static::markTestSkipped();
     }
 
     /**
@@ -126,6 +172,6 @@ class UserServiceTest extends PHPUnit_Framework_TestCase
      */
     public function shouldRestoreThePassword()
     {
-        $this->markTestSkipped();
+        static::markTestSkipped();
     }
 }

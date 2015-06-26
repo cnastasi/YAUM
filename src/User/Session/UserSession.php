@@ -4,18 +4,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-namespace YAUM\Contract;
+namespace YAUM\User\Session;
+
+use YAUM\Entity;
+use YAUM\User\User;
 
 /**
  *
  * @author christian
  */
-interface UserSessionFactory
+interface UserSession extends Entity
 {
     /**
-     * 
-     * @param User $user
-     * @return UserSession
+     * @return User
      */
-    public function create(User $user);
+    public function getUser ();
+    
+    /**
+     * @return string
+     */
+    public function getToken();
 }

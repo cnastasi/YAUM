@@ -1,4 +1,4 @@
-<?php namespace YAUM\Contract;
+<?php namespace YAUM\User;
 
 /**
  * Description of UserService
@@ -10,10 +10,10 @@ interface UserService
 
     /**
      * 
-     * @param Credential $credential
+     * @param mixed $credential
      * @return string
      */
-    public function login(Credential $credential);
+    public function login($credential);
 
     /**
      * 

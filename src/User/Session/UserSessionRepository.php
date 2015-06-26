@@ -1,4 +1,4 @@
-<?php namespace YAUM\Contract;
+<?php namespace YAUM\User\Session;
 
 /**
  *

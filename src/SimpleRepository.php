@@ -1,6 +1,6 @@
-<?php namespace YAUM\Repository;
+<?php namespace YAUM;
 
-use YAUM\Contract\Entity;
+use YAUM;
 
 /**
  * Description of SimpleRepository
@@ -16,20 +16,9 @@ class SimpleRepository
      */
     private $map;
 
-    /**
-     *
-     * @var Entity[]
-     */
-    private $mapById;
-
-    /**
-     * @var string[]
-     */
-    private $idToKeyMap;
-
     public function __construct()
     {
-        $this->map        = array();
+        $this->map = array();
     }
 
     public function put(Entity $value)
@@ -38,12 +27,12 @@ class SimpleRepository
     }
 
     /**
-     * @param $key
+     * @param $id
      * @return Entity|null
      */
     public function getById($id)
     {
-        if (isset($this->map[$id])) {
+        if (array_key_exists($id, $this->map)) {
             return $this->map[$id];
         }
 
@@ -51,7 +40,8 @@ class SimpleRepository
     }
 
     /**
-     * @param mixed $id
+     * @param callable $callback
+     * @return null|Entity
      */
     public function getByCallback(callable $callback)
     {
@@ -68,7 +58,7 @@ class SimpleRepository
 
     public function remove($id)
     {
-        if (isset($this->map[$id])) {
+        if (array_key_exists($id, $this->map)) {
             unset($this->map[$id]);
         }
     }

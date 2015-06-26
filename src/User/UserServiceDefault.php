@@ -4,13 +4,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-namespace YAUM\Service;
+namespace YAUM\User;
 
-use YAUM\Contract\Credential;
-use YAUM\Contract\CredentialChecker;
-use YAUM\Contract\UserService;
-use YAUM\Contract\UserSessionFactory;
-use YAUM\Contract\UserSessionManager;
+use YAUM\User\Credential\CredentialChecker;
+use YAUM\User\Session\UserSessionFactory;
+use YAUM\User\Session\UserSessionManager;
 
 /**
  * Description of UserServiceDefault
@@ -38,6 +36,11 @@ class UserServiceDefault implements UserService
      */
     private $userSessionFactory;
 
+    /**
+     * @param CredentialChecker $credentialChecker
+     * @param UserSessionFactory $userSessionFactory
+     * @param UserSessionManager $userSessionManager
+     */
     public function __construct(
         CredentialChecker $credentialChecker,
         UserSessionFactory $userSessionFactory,
@@ -48,7 +51,11 @@ class UserServiceDefault implements UserService
         $this->userSessionFactory = $userSessionFactory;
     }
 
-    public function login(Credential $credential)
+    /**
+     * @param mixed $credential
+     * @return string
+     */
+    public function login($credential)
     {
         $user    = $this->credentialChecker->check($credential);
         $session = $this->userSessionFactory->create($user);
@@ -58,6 +65,10 @@ class UserServiceDefault implements UserService
         return $session->getToken();
     }
 
+    /**
+     * @param string $token
+     * @return bool
+     */
     public function isLogged($token)
     {
         $session = $this->userSessionManager->getUserSession($token);
